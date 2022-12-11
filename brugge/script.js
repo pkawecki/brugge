@@ -1,5 +1,5 @@
 const wsd = document.querySelector("#WP-Stad-Default");
-console.log("wsd", wsd);
+console.log("wsdd", wsd);
 const { useState } = React;
 const lang = document.documentElement.lang;
 const tiles = {
