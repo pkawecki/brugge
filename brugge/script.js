@@ -52,27 +52,29 @@ function Block({ title, icon_name, subtitles }) {
     console.log("active", active);
 
 
-    return <div className="container">
-        <div className="innerContainer">
-            <div onTouchStart={() => { setActive(!active) }}>
-                <div className={`itemMob dropdown ${active ? "active" : ""}`}>
-                    <span className="notificationDot" ></span>
-                    <i className={icon_name}></i>
-                    <h3>{title}</h3>
-                    <ul className="dropdown-menu notifications">
-                        {subtitles.map(subtitle => (
-                            <li key={subtitle} id={subtitle}>
-                                <a href="#" >
-                                    <span className="subNotificationDot">0</span>
-                                    <span className="subNotificationText">{subtitle}</span>
-                                </a>
-                            </li>
-                        ))}
-                    </ul>
+    return (
+        <div className="container">
+            <div className="innerContainer">
+                <div onTouchStart={() => { setActive(!active) }}>
+                    <div className={`itemMob dropdown ${active ? "active" : ""}`}>
+                        <span className="notificationDot" ></span>
+                        <i className={icon_name}></i>
+                        <h3>{title}</h3>
+                        <ul className="dropdown-menu notifications">
+                            {subtitles.map(subtitle => (
+                                <li key={subtitle} id={subtitle}>
+                                    <a href="#" >
+                                        <span className="subNotificationDot">0</span>
+                                        <span className="subNotificationText">{subtitle}</span>
+                                    </a>
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
+    )
 }
 
 function MyApp() {
