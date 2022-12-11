@@ -51,6 +51,7 @@ function Block({ title, icon_name, subtitles }) {
     const [active, setActive] = useState(false);
     console.log("active", active);
 
+
     return <div className="container">
         <div className="innerContainer">
             <div onTouchStart={() => { setActive(!active) }}>
